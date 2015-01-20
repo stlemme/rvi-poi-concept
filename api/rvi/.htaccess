@@ -1,0 +1,6 @@
+
+RewriteEngine On
+RewriteBase /rvi-poi-concept/api/rvi
+
+RewriteCond %{REQUEST_FILENAME}.json.php  -f
+RewriteRule ^([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})$  $1.json.php
