@@ -157,7 +157,7 @@
 		</assetmesh>
 	</asset>
 
-	<dataflow id="colorize_temperature" out="diffuseColor">
+	<dataflow id="colorize" out="diffuseColor">
 		<float name="gradient" param="true" />
 		<float name="minvalue" param="true" />
 		<float name="maxvalue" param="true" />
@@ -173,7 +173,7 @@
 	</dataflow>
 	
 	<asset id="tetrahedra">
-		<assetdata name="config" compute="dataflow['#colorize_temperature']">
+		<assetdata name="config" compute="dataflow['#colorize']">
 			<!-- <float3 name="diffuseColor">0 0.44 0.74</float3> -->
 			<float3 name="color1">0 0.44 0.74</float3>
 			<float3 name="color2">1 0.0 0.0</float3>
@@ -198,6 +198,16 @@
 			</texture>
 			<data src="#mesh_tetraeder_with_icon"></data>
 		</assetmesh>
+	</asset>
+
+	<asset id="poi_places" src="/rvi-poi-concept/api/3d-tiles/42362-asset.xml#poi_places">
+		<assetdata name="config" compute="dataflow['#colorize']">
+			<float3 name="color1">0 0.44 0.04</float3>
+			<float3 name="color2">1 0.0 0.0</float3>
+			<float name="gradient">0.0</float>
+			<float name="minvalue">150.0</float>
+			<float name="maxvalue">500.0</float>
+		</assetdata>
 	</asset>
 
 </xml3d>
