@@ -11,7 +11,23 @@
 </texture>
 </assetmesh>
 </asset>
+
+<asset id="poi_places">
+	<assetdata name="config"></assetdata>
+	<assetdata name="geometry" id="poi_places_geometry">
+		<data compute="dataflow['basic.xml#dataflow_extrude']">
+			<float2 name="contour">
+			0.63275235556648 0.63261611334747 0.65987697777746 0.70982953534985 0.65430641778221 0.72796852811007 0.64389347555698 0.73771210345149 0.5160618666705 0.74095996108372 0.43199374222604 0.7495392057026 0.43206655999529 0.71865391178289 0.43115633778507 0.6468944856897 0.43476081777771 0.57862786187616 0.41473592889088 0.58193702015706 0.40971150223049 0.50846135122993 0.47371832888166 0.50625523951021 0.48209237333504 0.56747476982127 0.47371832888166 0.65878290988621 0.55483733332949 0.65069387959375 0.63275235556648 0.63261611334747</float2>
+			<float name="height">
+			16.650485404139</float>
+		</data>
+	</assetdata>
+	<assetmesh type="triangles" shader="basic.xml#shader_building" includes="config, geometry">
+	</assetmesh>
+</asset>
+
 <asset id="buildings">
+
 <assetmesh shader="basic.xml#shader_building" type="triangles">
 <data compute="dataflow['basic.xml#dataflow_extrude']">
 <float2 name="contour">
@@ -140,6 +156,7 @@
 15.629920435897</float>
 </data>
 </assetmesh>
+
 <assetmesh shader="basic.xml#shader_building" type="triangles">
 <data compute="dataflow['basic.xml#dataflow_extrude']">
 <float2 name="contour">
@@ -172,14 +189,17 @@
 12.154068589282</float>
 </data>
 </assetmesh>
-<assetmesh shader="basic.xml#shader_building" type="triangles">
+
+<!-- Places in Hamburg -->
+<!-- <assetmesh shader="basic.xml#shader_building" type="triangles">
 <data compute="dataflow['basic.xml#dataflow_extrude']">
 <float2 name="contour">
 0.63275235556648 0.63261611334747 0.65987697777746 0.70982953534985 0.65430641778221 0.72796852811007 0.64389347555698 0.73771210345149 0.5160618666705 0.74095996108372 0.43199374222604 0.7495392057026 0.43206655999529 0.71865391178289 0.43115633778507 0.6468944856897 0.43476081777771 0.57862786187616 0.41473592889088 0.58193702015706 0.40971150223049 0.50846135122993 0.47371832888166 0.50625523951021 0.48209237333504 0.56747476982127 0.47371832888166 0.65878290988621 0.55483733332949 0.65069387959375 0.63275235556648 0.63261611334747</float2>
 <float name="height">
 16.650485404139</float>
 </data>
-</assetmesh>
+</assetmesh> -->
+
 <assetmesh shader="basic.xml#shader_building" type="triangles">
 <data compute="dataflow['basic.xml#dataflow_extrude']">
 <float2 name="contour">
@@ -188,6 +208,7 @@
 19.354353495573</float>
 </data>
 </assetmesh>
+
 <assetmesh shader="basic.xml#shader_building" type="triangles">
 <data compute="dataflow['basic.xml#dataflow_extrude']">
 <float2 name="contour">

@@ -1,7 +1,7 @@
 <?php
 	$degree = 20.0 + 3.0 * sin(time()/10.0);
 	$precision = 2;
-	$self_uri = $_SERVER['SCRIPT_URI'];
+	$self_uri = $_SERVER['REQUEST_URI'];
 	
 	header("Content-type: application/json");
 ?>{

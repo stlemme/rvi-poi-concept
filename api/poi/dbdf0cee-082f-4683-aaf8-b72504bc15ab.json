@@ -1,0 +1,11 @@
+{
+	"fw_xml3d": {
+		"asset": "/rvi-poi-concept/api/poi/sensor-asset.xml#poi_places",
+		"config": {
+			"map": {
+				"gradient": "fw_rvi.sensors.energy_consumption.value"
+			}
+		}
+	},
+	"fw_rvi": "/rvi-poi-concept/api/rvi/dbdf0cee-082f-4683-aaf8-b72504bc15ab/components/fw_rvi"
+}
