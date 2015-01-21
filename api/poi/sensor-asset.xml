@@ -12,7 +12,7 @@
 			<texture name="diffuseTexture">
 				<img src="poi-marker.png"/>
 			</texture>
-			<float3 name="diffuseColor">0 0.44 0.74</float3>
+			<float3 name="diffuseColor">0.44 0.44 0.44</float3>
 		</shader>
 	</defs>
 	
@@ -153,6 +153,49 @@
 		</assetdata>
 		
 		<assetmesh meshtype="triangles" shader="#poi_shader" includes="config, tf">
+			<data src="#mesh_tetraeder_with_icon"></data>
+		</assetmesh>
+	</asset>
+
+	<dataflow id="colorize_temperature" out="diffuseColor">
+		<float name="gradient" param="true" />
+		<float name="minvalue" param="true" />
+		<float name="maxvalue" param="true" />
+		<float3 name="color1" param="true" />
+		<float3 name="color2" param="true" />
+		<compute>
+			gradient = rvi.linearstep(minvalue, maxvalue, gradient);
+			hsv1 = rvi.rgb2hsv(color1);
+			hsv2 = rvi.rgb2hsv(color2);
+			hsv = rvi.colorGradient(hsv1, hsv2, gradient);
+			diffuseColor = rvi.hsv2rgb(hsv);
+		</compute>
+	</dataflow>
+	
+	<asset id="tetrahedra">
+		<assetdata name="config" compute="dataflow['#colorize_temperature']">
+			<!-- <float3 name="diffuseColor">0 0.44 0.74</float3> -->
+			<float3 name="color1">0 0.44 0.74</float3>
+			<float3 name="color2">1 0.0 0.0</float3>
+			<float name="gradient">18.0</float>
+			<float name="minvalue">18.0</float>
+			<float name="maxvalue">21.0</float>
+		</assetdata>
+		
+		<assetdata name="tf">
+			<!-- <transform scale="0.4 0.4 0.4"></transform> -->
+			<float4x4 name="meshTransform">
+				0.2 0 0 0
+				0 0.2 0 0
+				0 0 0.2 0
+				0 0 0 1
+			</float4x4>
+		</assetdata>
+		
+		<assetmesh meshtype="triangles" shader="#poi_shader" includes="config, tf">
+			<texture name="diffuseTexture">
+				<img src="Temperature-512-white.png"/>
+			</texture>
 			<data src="#mesh_tetraeder_with_icon"></data>
 		</assetmesh>
 	</asset>

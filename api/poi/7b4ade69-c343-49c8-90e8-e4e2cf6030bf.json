@@ -1,0 +1,11 @@
+{
+	"fw_xml3d": {
+		"asset": "/rvi-poi-concept/api/poi/sensor-asset.xml#tetrahedra",
+		"config": {
+			"map": {
+				"gradient": "fw_rvi.sensors.temperature.value"
+			}
+		}
+	},
+	"fw_rvi": "/rvi-poi-concept/api/rvi/7b4ade69-c343-49c8-90e8-e4e2cf6030bf/components/fw_rvi"
+}
