@@ -3,4 +3,4 @@ RewriteEngine On
 RewriteBase /rvi-poi-concept/api/rvi
 
 RewriteCond %{REQUEST_FILENAME}.json.php  -f
-RewriteRule ^([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})$  $1.json.php
+RewriteRule ^([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})(/components/fw_rvi)?$  $1.json.php

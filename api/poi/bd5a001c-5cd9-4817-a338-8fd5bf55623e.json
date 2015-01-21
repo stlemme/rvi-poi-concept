@@ -3,9 +3,9 @@
 		"asset": "/rvi-poi-concept/api/poi/sensor-asset.xml#box",
 		"config": {
 			"map": {
-				"length": "fw_rvi.sensors.temperature.value"
+				"height": "fw_rvi.sensors.temperature.value"
 			}
 		}
 	},
-	"fw_rvi": "/rvi-poi-concept/api/rvi/bd5a001c-5cd9-4817-a338-8fd5bf55623e"
+	"fw_rvi": "/rvi-poi-concept/api/rvi/bd5a001c-5cd9-4817-a338-8fd5bf55623e/components/fw_rvi"
 }
