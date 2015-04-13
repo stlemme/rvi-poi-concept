@@ -200,7 +200,7 @@
 		</assetmesh>
 	</asset>
 
-	<asset id="poi_places" src="/rvi-poi-concept/api/3d-tiles/42362-asset.xml#poi_places">
+	<asset id="poi_places" src="/rvi-poi-concept/api/3d-tiles/42362-asset-mod.xml#poi_places">
 		<assetdata name="config" compute="dataflow['#colorize']">
 			<float3 name="color1">0 0.44 0.04</float3>
 			<float3 name="color2">1 0.0 0.0</float3>

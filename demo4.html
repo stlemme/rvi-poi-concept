@@ -29,7 +29,7 @@
 			window.setInterval(XML3D.update_poi_data, 500);
 		}
 		
-		window.addEventListener('load', onload);
+		//window.addEventListener('load', onload);
 		
 	</script>
 </head>
@@ -44,8 +44,18 @@
 			
 			<group id="ground" transform="#ground_tf_scale">
 				<group transform="#center_tile_tf">
-					<model src="api/3d-tiles/42362-asset-mod.xml#plane"></model>
-					<model src="api/3d-tiles/42362-asset-mod.xml#buildings"></model>
+					<model src="api/3d-tiles/42362-asset.xml#plane"></model>
+					<model src="api/3d-tiles/42362-asset.xml#buildings">
+						<assetmesh name="osm_way_58530547">
+							<data compute="dataflow['api/poi/sensor-asset.xml#colorize']">
+								<float3 name="color1">0 0.44 0.04</float3>
+								<float3 name="color2">1 0.0 0.0</float3>
+								<float name="gradient">450.0</float>
+								<float name="minvalue">150.0</float>
+								<float name="maxvalue">500.0</float>
+							</data>
+						</assetmesh>
+					</model>
 					<group id="pois" transform="#poi_tf"></group>
 				</group>
 			</group>
